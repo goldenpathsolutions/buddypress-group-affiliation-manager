@@ -1,5 +1,6 @@
 <?php
-namespace gps\gam;
+
+use \gps\gam\Group_Affiliation_Manager;
 
 /**
  * Plugin Name: GPS Group Affiliation Manager
@@ -11,12 +12,13 @@ namespace gps\gam;
  * License: This plugin is the property of Golden Path Solutions with all rights reserved, copyright 2013.
  */
 
+$GPS_GAM_DIR = dirname(__FILE__); //stores the root directory for this plugin
+
 
 /*****************************************************************************
  * create and instantiate convenience class...
  */
-require_once( dirname(__FILE__) . '/classes/group-affiliation-manager.php');
-
+require_once( $GPS_GAM_DIR . '/classes/group-affiliation-manager.php');
 $group_affiliation_manager =  new Group_Affiliation_Manager();
 
 

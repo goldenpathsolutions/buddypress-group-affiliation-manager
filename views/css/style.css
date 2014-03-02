@@ -1,0 +1,95 @@
+/*
+    Default styles for Group Affiliation Manager Plugin
+
+
+    Created on : Dec 5, 2013, 10:11:17 AM
+    Author     : Patrick Jackson, Golden Path Solutions
+    Version    : 1.0
+
+
+    Table of Contents
+
+    1. Global
+    
+    2. Group Create
+    -2.1 Add Collection Form
+    -2.2 Affiliation Collection List
+
+    3. Ajax
+
+
+*/
+/***************************************************************************/
+/**  1. Global  **/
+/***************************************************************************/
+
+.close { 
+    float: right; 
+    margin: 10px; 
+    /*border: #999 solid 1px; */
+    color: #999 !important;
+    display: inline-block;
+    width: 16px;
+    text-align:center;
+    text-decoration: none;
+}
+
+.info {
+    display: inline-block;
+    border-radius: 50%;
+    /*background: #999;*/
+    border: #999 solid 1px;
+    width: 1em;
+    text-align:center;
+    color: #999 !important;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+/***************************************************************************/
+/**  2. Group Create  **/
+/***************************************************************************/
+
+/* 2.1 Add Collection Form */
+#add-collection-button { 
+    margin-left: 40px !important;
+}
+#add-affiliation-collection {
+    background-color: #eeeeee;
+    margin-left: 30px;
+    margin: 30px;
+}
+#add-affiliation-collection ul { padding: 10px 30px; }
+#add-affiliation-collection .gam-submit-button { margin-top: 10px; }
+#add-affiliation-collection textarea { height: auto; }
+#add-affiliation-collection li {clear: both;}
+#add-affiliation-collection .checkbox input,
+#add-affiliation-collection .checkbox label,
+#add-affiliation-collection .checkbox a { 
+    float: left;
+    margin: 10px 10px 10px 0;
+}
+#add-affiliation-collection input[type="checkbox"] { position:relative; top: -1px;}
+#add-affiliation-collection li.checkbox { line-height: 1em; }
+
+
+/* 2.2 Affiliation Collection List */
+
+.affiliation-collection { margin: 0 0 20px 30px;}
+
+#group-affiliation-collections .buttons { margin-left: 30px; }
+#group-affiliation-collections h4 .button { margin-left: 10px; }
+#group-affiliation-collections .description { margin-left: 20px; }
+
+.affiliation-collection-toggle { margin-right: 20px; }
+
+/***************************************************************************/
+/**  3. Ajax  **/
+/***************************************************************************/
+
+.gam-spinner {
+    display:none; /* initially hidden */
+    background: url('../images/loading.gif') no-repeat center;
+    width:16px;
+    margin: 0px 10px;
+}

@@ -60,8 +60,19 @@ class Group_Affiliation_Manager_BPGE extends BP_Group_Extension {
    }
    
    function create_screen($group_id = null) {
-       parent::create_screen($group_id);  //do whatever the parent does with this first...
-       echo 'Enter Initial Group Creation Stuff Here!';
+       
+       global  $group_affiliation_manager,
+               $GPS_GAM_DIR;
+       
+       if ($group_id == 0 || $group_id == null) {
+            $group_id = parent::get_group_id();
+        }
+        parent::create_screen($group_id);  //do whatever the parent does with this first...
+        
+        //store some parameters used by the view
+        $group_affiliation_manager->set_current_group( $group_id );
+                
+       require_once ( $GPS_GAM_DIR . '/views/group_create.php');
     }
     
     function create_screen_save($group_id = null) {
@@ -88,6 +99,8 @@ class Group_Affiliation_Manager_BPGE extends BP_Group_Extension {
         parent::admin_screen($group_id); //do whatever the parent does with this first...
         echo 'Show this after hitting save on the Admin Screen!';
     }
+    
+    
     
 }
 
